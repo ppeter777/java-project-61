@@ -8,7 +8,6 @@ public class Calc {
         final var maxRandomForAdditionAndSubtraction = 100;
         final var maxRandomForMultiplication = 20;
         final var operationsCount = 3;
-
         String[] questions = new String[questionsCount];
         String[] answers = new String[questionsCount];
         int operand1 = 0;
@@ -17,26 +16,21 @@ public class Calc {
         String taskDescription = "What is the result of the expression?";
         for (var i = 0; i < questionsCount; i++) {
             int operationCode = (int) (Math.random() * operationsCount);
-            switch (operationCode) {
-                case 0:
-                    operation = " + ";
-                    operand1 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
-                    operand2 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
-                    answers[i] = Integer.toString(operand1 + operand2);
-                    break;
-                case 1:
-                    operation = " - ";
-                    operand1 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
-                    operand2 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
-                    answers[i] = Integer.toString(operand1 - operand2);
-                    break;
-                case 2:
-                    operation = " * ";
-                    operand1 = (int) (Math.random() * maxRandomForMultiplication);
-                    operand2 = (int) (Math.random() * maxRandomForMultiplication);
-                    answers[i] = Integer.toString(operand1 * operand2);
-                    break;
-                default:
+            if (operationCode == 0) {
+                operation = " + ";
+                operand1 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
+                operand2 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
+                answers[i] = Integer.toString(operand1 + operand2);
+            } else if (operationCode == 1) {
+                operation = " - ";
+                operand1 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
+                operand2 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
+                answers[i] = Integer.toString(operand1 - operand2);
+            } else if (operationCode == 2) {
+                operation = " * ";
+                operand1 = (int) (Math.random() * maxRandomForMultiplication);
+                operand2 = (int) (Math.random() * maxRandomForMultiplication);
+                answers[i] = Integer.toString(operand1 * operand2);
             }
             questions[i] = Integer.toString(operand1) + operation + Integer.toString(operand2);
         }
