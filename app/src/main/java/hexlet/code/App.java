@@ -22,19 +22,12 @@ public class App {
         System.out.print("Your choice: ");
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.next();
-        if (choice.equals("1")) {
-            greeting();
-        } else if (choice.equals("2")) {
-            even();
-        } else if (choice.equals("3")) {
-            calc();
-        } else if (choice.equals("4")) {
-            gcd();
-        } else if (choice.equals("5")) {
-            progression();
-        } else if (choice.equals("6")) {
-            prime();
-        }
+        if (choice.equals("1")) greeting();
+        else if (choice.equals("2")) even();
+        else if (choice.equals("3")) calc();
+        else if (choice.equals("4")) gcd();
+        else if (choice.equals("5")) progression();
+        else if (choice.equals("6")) prime();
     }
 }
 
