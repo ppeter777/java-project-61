@@ -17,10 +17,9 @@ public class GCD {
             int maxGCD = Math.min(randomNum1, randomNum2);
             int gcd = 1;
             for (var n = 1; n <= maxGCD; n++) {
-                if (randomNum1 % n == 0)
-                    if (randomNum2 % n == 0) {
-                        gcd = n;
-                    }
+                if (randomNum1 % n == 0 && randomNum2 % n == 0) {
+                    gcd = n;
+                }
             }
             questions[i] = Integer.toString(randomNum1) + " " + Integer.toString(randomNum2);
             answers[i] = Integer.toString(gcd);
