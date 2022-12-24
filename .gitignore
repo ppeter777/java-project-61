@@ -1,10 +1,4 @@
-app/.gradle/
 app/.idea
 app/Makefile
-app/build.gradle
 app/build/
 app/config/
-app/gradle/
-app/gradlew
-app/gradlew.bat
-app/settings.gradle
