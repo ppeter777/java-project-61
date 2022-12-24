@@ -24,20 +24,15 @@ public class App {
         String choice = scanner.next();
         if (choice.equals("1")) {
             greeting();
-        }
-        else if (choice.equals("2")) {
+        } else if (choice.equals("2")) {
             even();
-        }
-        else if (choice.equals("3")) {
+        } else if (choice.equals("3")) {
             calc();
-        }
-        else if (choice.equals("4")) {
+        } else if (choice.equals("4")) {
             gcd();
-        }
-        else if (choice.equals("5")) {
+        } else if (choice.equals("5")) {
             progression();
-        }
-        else if (choice.equals("6")) {
+        } else if (choice.equals("6")) {
             prime();
         }
     }
