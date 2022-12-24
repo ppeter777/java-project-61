@@ -12,7 +12,9 @@ public class Even {
             questions[i] = Integer.toString(randomNum);
             if (randomNum % 2 == 0) {
                 answers[i] = "yes";
-            } else answers[i] = "no";
+            } else {
+                answers[i] = "no";
+            }
         }
         engine(taskDescription, questions, answers);
     }

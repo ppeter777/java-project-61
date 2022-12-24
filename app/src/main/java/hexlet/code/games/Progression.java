@@ -31,7 +31,8 @@ public class Progression {
         for (var m = 0; m < progression.length; m++) {
             if (m != missingElement) {
                 question += Integer.toString(progression[m]) + " ";
-            } else { question += ".. ";
+            } else {
+                question += ".. ";
             }
         }
         return question;
