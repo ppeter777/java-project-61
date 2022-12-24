@@ -4,14 +4,20 @@ import static hexlet.code.Engine.engine;
 
 public class Progression {
     public static void progression() {
-        int questionsCount = 3;
+        var questionsCount = 3;
+        var minNumbersInProgression = 5;
+        var variableNumbersInProgression = 5;
+        var maxFirst = 20;
+        var minStep = 2;
+        var varStep = 5;
+
         String[] questions = new String[questionsCount];
         String[] answers = new String[questionsCount];
         String taskDescription = "What number is missing in the progression?";
         for (var i = 0; i < questionsCount; i++) {
-            int progressionStep = (int) (Math.random() * 5) + 2; /* Progression step is in range 2..6 */
-            int firstElement = (int) (Math.random() * 20) + 1; /* First element is in range 1..20 */
-            int elements = (int) (Math.random() * 5) + 5; /* The number of elements in progression is in range 5..10 */
+            int progressionStep = (int) (Math.random() * varStep) + minStep; /* Progression step is in range 2..6 */
+            int firstElement = (int) (Math.random() * maxFirst) + 1; /* First element is in range 1..20 */
+            int elements = (int) (Math.random() * variableNumbersInProgression) + minNumbersInProgression; /* The number of elements in progression is in range 5..10 */
             int missingElement = (int) (Math.random() * elements); /* Define the position of missing element */
             int[] progression = generateProgression(elements, firstElement, progressionStep);
             questions[i] = generateQuestion(progression, missingElement);
