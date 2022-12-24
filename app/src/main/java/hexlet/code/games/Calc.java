@@ -4,10 +4,10 @@ import static hexlet.code.Engine.engine;
 
 public class Calc {
     public static void calc() {
-        var questionsCount = 3;
-        var maxRandomForAdditionAndSubtraction = 100;
-        var maxRandomForMultiplication = 20;
-        var operationsCount = 3;
+        final var questionsCount = 3;
+        final var maxRandomForAdditionAndSubtraction = 100;
+        final var maxRandomForMultiplication = 20;
+        final var operationsCount = 3;
 
         String[] questions = new String[questionsCount];
         String[] answers = new String[questionsCount];
