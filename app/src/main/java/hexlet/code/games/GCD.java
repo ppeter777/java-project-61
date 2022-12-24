@@ -4,8 +4,8 @@ import static hexlet.code.Engine.engine;
 
 public class GCD {
     public static void gcd() {
-        var questionsCount = 3;
-        var maxRandomNumber = 100;
+        final var questionsCount = 3;
+        final var maxRandomNumber = 100;
 
         String[] questions = new String[questionsCount];
         String[] answers = new String[questionsCount];

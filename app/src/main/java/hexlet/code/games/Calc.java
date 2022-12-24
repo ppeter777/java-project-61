@@ -16,7 +16,7 @@ public class Calc {
         String operation = "";
         String taskDescription = "What is the result of the expression?";
         for (var i = 0; i < questionsCount; i++) {
-            int operationCode = (int) (Math.random() * operationsCount); /* 0 - Addition; 1 - Subtraction; 2 - Multiplication */
+            int operationCode = (int) (Math.random() * operationsCount);
             switch (operationCode) {
                 case 0:
                     operation = " + ";
@@ -36,6 +36,7 @@ public class Calc {
                     operand2 = (int) (Math.random() * maxRandomForMultiplication);
                     answers[i] = Integer.toString(operand1 * operand2);
                     break;
+                default:
             }
             questions[i] = Integer.toString(operand1) + operation + Integer.toString(operand2);
         }

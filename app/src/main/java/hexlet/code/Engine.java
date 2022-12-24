@@ -6,7 +6,7 @@ import static hexlet.code.Cli.greeting;
 
 public class Engine {
     public static void engine(String taskDescription, String[] questions, String[] answers) {
-        var questionsCount = 3;
+        final var questionsCount = 3;
 
         Scanner scanner = new Scanner(System.in);
         String user = greeting();

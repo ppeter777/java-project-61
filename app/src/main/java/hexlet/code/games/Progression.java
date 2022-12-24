@@ -4,13 +4,12 @@ import static hexlet.code.Engine.engine;
 
 public class Progression {
     public static void progression() {
-
-        var questionsCount = 3;
-        var minNumbersInProgression = 5;
-        var variableNumbersInProgression = 5;
-        var maxFirst = 20;
-        var minStep = 2;
-        var varStep = 5;
+        final var questionsCount = 3;
+        final var minNumbersInProgression = 5;
+        final var variableNumbersInProgression = 5;
+        final var maxFirst = 20;
+        final var minStep = 2;
+        final var varStep = 5;
 
         String[] questions = new String[questionsCount];
         String[] answers = new String[questionsCount];

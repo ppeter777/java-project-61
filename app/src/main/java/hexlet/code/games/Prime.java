@@ -4,9 +4,9 @@ import static hexlet.code.Engine.engine;
 
 public class Prime {
     public static void prime() {
-        var questionsCount = 3;
-        var minNumber = 2;
-        var maxNumber = 100;
+        final var questionsCount = 3;
+        final var minNumber = 2;
+        final var maxNumber = 100;
 
         String[] questions = new String[questionsCount];
         String[] answers = new String[questionsCount];
