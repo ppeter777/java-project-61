@@ -4,7 +4,7 @@
 
 https://asciinema.org/a/Fxk0lxPyruYXXkjtKn4wruSZW
 
-https://asciinema.org/a/nYzBGphxwFoznY0VBVnzOn47X
+Calc: https://asciinema.org/a/QP8831hgccsMEOgmHfAJFsaAR
 
 GCD: https://asciinema.org/a/oHvV9uZOJIUU0OHDfM6Py1y2v
 
