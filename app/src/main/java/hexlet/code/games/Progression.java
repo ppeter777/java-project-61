@@ -5,19 +5,19 @@ import static hexlet.code.Engine.engine;
 public class Progression {
     public static void progression() {
         final var questionsCount = 3;
-        final var minNumbersInProgression = 5;
-        final var variableNumbersInProgression = 5;
-        final var maxFirst = 20;
-        final var minStep = 2;
-        final var varStep = 5;
+        final var minElements = 5;
+        final var maxElements = 10;
+        final var maxFirstElement = 20;
+        final var minStep = 5;
+        final var maxStep = 12;
 
         String[] questions = new String[questionsCount];
         String[] answers = new String[questionsCount];
         String taskDescription = "What number is missing in the progression?";
         for (var i = 0; i < questionsCount; i++) {
-            int progressionStep = (int) (Math.random() * varStep) + minStep;
-            int firstElement = (int) (Math.random() * maxFirst) + 1;
-            int elements = (int) (Math.random() * variableNumbersInProgression) + minNumbersInProgression;
+            int progressionStep = (int) (Math.random() * (maxStep - minStep + 1)) + minStep;
+            int firstElement = (int) (Math.random() * maxFirstElement) + 1;
+            int elements = (int) (Math.random() * (maxElements - minElements + 1)) + minElements;
             int missingElement = (int) (Math.random() * elements);
             int[] progression = generateProgression(elements, firstElement, progressionStep);
             questions[i] = generateQuestion(progression, missingElement);
@@ -36,7 +36,7 @@ public class Progression {
         String question = new String();
         for (var m = 0; m < progression.length; m++) {
             if (m != missingElement) {
-                question += Integer.toString(progression[m]) + " ";
+                question += progression[m] + " ";
             } else {
                 question += ".. ";
             }
