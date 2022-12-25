@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.engine;
+import hexlet.code.Engine;
 
 public class Progression {
     public static void progression() {
@@ -14,6 +14,7 @@ public class Progression {
         String[] questions = new String[questionsCount];
         String[] answers = new String[questionsCount];
         String taskDescription = "What number is missing in the progression?";
+
         for (var i = 0; i < questionsCount; i++) {
             int progressionStep = (int) (Math.random() * (maxStep - minStep + 1)) + minStep;
             int firstElement = (int) (Math.random() * maxFirstElement) + 1;
@@ -23,7 +24,7 @@ public class Progression {
             questions[i] = generateQuestion(progression, missingElement);
             answers[i] = Integer.toString(progression[missingElement]);
         }
-        engine(taskDescription, questions, answers);
+        Engine.engine(taskDescription, questions, answers);
     }
     public static int[] generateProgression(int elements, int first, int step) {
         int[] output = new int[elements];

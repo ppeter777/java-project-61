@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.engine;
+import hexlet.code.Engine;
+
 public class Even {
     public static void even() {
         final var questionsCount = 3;
@@ -9,6 +10,7 @@ public class Even {
         String[] questions = new String[questionsCount];
         String[] answers = new String[questionsCount];
         String taskDescription = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
         for (var i = 0; i < questionsCount; i++) {
             int randomNum = (int) (Math.random() * maxRandom) + 1;
             questions[i] = Integer.toString(randomNum);
@@ -18,6 +20,6 @@ public class Even {
                 answers[i] = "no";
             }
         }
-        engine(taskDescription, questions, answers);
+        Engine.engine(taskDescription, questions, answers);
     }
 }

@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.engine;
+import hexlet.code.Engine;
 
 public class Calc {
     public static void calc() {
@@ -12,6 +12,7 @@ public class Calc {
         String[] answers = new String[questionsCount];
         String taskDescription = "What is the result of the expression?";
         String[] operations = {" + ", " - ", " * "};
+
         for (var i = 0; i < questionsCount; i++) {
             int operationCode = (int) (Math.random() * operationsCount);
             int result = 0;
@@ -27,6 +28,6 @@ public class Calc {
             answers[i] = Integer.toString(result);
             questions[i] = operand1 + operations[operationCode] + operand2;
         }
-        engine(taskDescription, questions, answers);
+        Engine.engine(taskDescription, questions, answers);
     }
 }
