@@ -16,18 +16,13 @@ public class App {
         System.out.print("Your choice: ");
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.next();
-        if (choice.equals("1")) {
-            greeting();
-        } else if (choice.equals("2")) {
-            even();
-        } else if (choice.equals("3")) {
-            calc();
-        } else if (choice.equals("4")) {
-            gcd();
-        } else if (choice.equals("5")) {
-            progression();
-        } else if (choice.equals("6")) {
-            prime();
+        switch (choice) {
+            case "1" -> greeting();
+            case "2" -> even();
+            case "3" -> calc();
+            case "4" -> gcd();
+            case "5" -> progression();
+            case "6" -> prime();
         }
     }
 }
