@@ -15,12 +15,13 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.next();
         switch (choice) {
+            case "1" -> Cli.greeting();
             case "2" -> Even.even();
             case "3" -> Calc.calc();
             case "4" -> GCD.gcd();
             case "5" -> Progression.progression();
             case "6" -> Prime.prime();
-            default -> Cli.greeting();
+            default -> throw new IllegalStateException("Unexpected value: " + choice);
         }
     }
 }
