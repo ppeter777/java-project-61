@@ -17,15 +17,13 @@ public class Calc {
         for (var i = 0; i < questionsCount; i++) {
             int operationCode = (int) (Math.random() * operationsCount);
             int result = 0;
+            operand1 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
+            operand2 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
             if (operationCode == 0) {
                 operation = " + ";
-                operand1 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
-                operand2 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
                 result = operand1 + operand2;
             } else if (operationCode == 1) {
                 operation = " - ";
-                operand1 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
-                operand2 = (int) (Math.random() * maxRandomForAdditionAndSubtraction);
                 result = operand1 - operand2;
             } else if (operationCode == 2) {
                 operation = " * ";
