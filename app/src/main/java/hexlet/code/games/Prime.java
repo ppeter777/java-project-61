@@ -13,7 +13,7 @@ public class Prime {
         String taskDescription = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
         for (var i = 0; i < questionsCount; i++) {
-            var randomNum = (int) (Math.random() * (maxNumber - minNumber + 1)) + minNumber; /* Number is in range 2..100 */
+            var randomNum = (int) (Math.random() * (maxNumber - minNumber + 1)) + minNumber;
             questions[i] = Integer.toString(randomNum);
             answers[i] = primeCheck(randomNum);
         }
