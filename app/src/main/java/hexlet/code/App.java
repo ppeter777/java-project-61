@@ -23,7 +23,9 @@ public class App {
             case "4" -> gcd();
             case "5" -> progression();
             case "6" -> prime();
+            default -> greeting();
         }
     }
 }
+
 
