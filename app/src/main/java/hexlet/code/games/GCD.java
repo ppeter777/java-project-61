@@ -19,7 +19,7 @@ public class GCD {
                     gcd = n;
                 }
             }
-            questions[i] = Integer.toString(randomNum1) + " " + Integer.toString(randomNum2);
+            questions[i] = randomNum1 + " " + randomNum2;
             answers[i] = Integer.toString(gcd);
         }
         engine(taskDescription, questions, answers);
