@@ -34,14 +34,15 @@ public class Progression {
         return output;
     }
     public static String generateQuestion(int[] progression, int missingElement) {
-        String question = new String();
+        var result = new StringBuilder();
         for (var m = 0; m < progression.length; m++) {
             if (m != missingElement) {
-                question += progression[m] + " ";
+                result.append(progression[m]);
+                result.append(" ");
             } else {
-                question += ".. ";
+                result.append(".. ");
             }
         }
-        return question;
+        return result.toString();
     }
 }
