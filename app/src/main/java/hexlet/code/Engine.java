@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static int rounds = 3;
+    private static final int rounds = 3;
     public static void engine(String taskDescription, String[] questions, String[] answers) {
         final var questionsCount = 3;
 
