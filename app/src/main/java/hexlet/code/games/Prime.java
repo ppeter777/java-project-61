@@ -1,19 +1,19 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
     public static void prime() {
-        final var questionsCount = 3;
         final var minNumber = 2;
         final var maxNumber = 100;
 
-        String[] questions = new String[questionsCount];
-        String[] answers = new String[questionsCount];
+        String[] questions = new String[Engine.getRounds()];
+        String[] answers = new String[Engine.getRounds()];
         String taskDescription = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        for (var i = 0; i < questionsCount; i++) {
-            var randomNum = (int) (Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+        for (var i = 0; i < Engine.getRounds(); i++) {
+            var randomNum = Utils.randomGen(minNumber, maxNumber);
             questions[i] = Integer.toString(randomNum);
             answers[i] = primeCheck(randomNum);
         }
