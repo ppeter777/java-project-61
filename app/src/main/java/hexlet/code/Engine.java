@@ -3,14 +3,14 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int rounds = 3;
+    private static final int ROUNDS = 3;
     public static void engine(String taskDescription, String[] questions, String[] answers) {
         final var questionsCount = 3;
 
         Scanner scanner = new Scanner(System.in);
         String user = Cli.greeting();
         System.out.println(taskDescription);
-        for (var i = 0; i < rounds; i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             System.out.println("Question: " + questions[i]);
             System.out.print("Your answer:  ");
             String input = scanner.next();
@@ -26,6 +26,6 @@ public class Engine {
         System.out.println("Congratulations, " + user + "!");
     }
     public static int getRounds() {
-        return rounds;
+        return ROUNDS;
     }
 }
