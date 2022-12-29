@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class Engine {
     private static final int ROUNDS = 3;
     public static void engine(String taskDescription, String[] questions, String[] answers) {
-        final var questionsCount = 3;
-
         Scanner scanner = new Scanner(System.in);
         String user = Cli.greeting();
         System.out.println(taskDescription);
