@@ -31,7 +31,7 @@ public class GCD {
         }
         return gcd;
     }
-    public static boolean isDivisible (int input, int divisor) {
+    public static boolean isDivisible(int input, int divisor) {
         return input % divisor == 0;
     }
 }
