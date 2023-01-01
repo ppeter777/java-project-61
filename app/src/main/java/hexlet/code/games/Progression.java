@@ -21,15 +21,15 @@ public class Progression {
             int firstElement = Utils.randomGen(minFirstElement, maxFirstElement);
             int elements = Utils.randomGen(minElements, maxElements);
             int missingElement = Utils.randomGen(0, elements - 1);
-            String [] progression = progressionGen(elements, firstElement, progressionStep);
+            String[] progression = progressionGen(elements, firstElement, progressionStep);
             answers[i] = progression[missingElement];
             progression[missingElement] = "..";
             questions[i] = String.join(" ", progression);
         }
         Engine.engine(taskDescription, questions, answers);
     }
-    public static String[] progressionGen (int elements, int first, int step) {
-        String [] progression = new String[elements];
+    public static String[] progressionGen(int elements, int first, int step) {
+        String[] progression = new String[elements];
         for (var m = 0; m < elements; m++) {
             progression[m] = Integer.toString(first + m * step);
         }
