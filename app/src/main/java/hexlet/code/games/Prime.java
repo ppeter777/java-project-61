@@ -19,7 +19,6 @@ public class Prime {
         }
         Engine.engine(taskDescription, questions, answers);
     }
-
     public static String primeCheck(int input) {
         String output = "yes";
         for (var i = 2; i <= input / 2; i++) {
@@ -29,7 +28,6 @@ public class Prime {
         }
         return output;
     }
-
     public static boolean isDivisible(int input, int divisor) {
         return input % divisor == 0;
     }
