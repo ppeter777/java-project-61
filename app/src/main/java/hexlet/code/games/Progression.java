@@ -21,29 +21,18 @@ public class Progression {
             int firstElement = Utils.randomGen(minFirstElement, maxFirstElement);
             int elements = Utils.randomGen(minElements, maxElements);
             int missingElement = Utils.randomGen(0, elements - 1);
-            int[] progression = generateProgression(elements, firstElement, progressionStep);
-            questions[i] = generateQuestion(progression, missingElement);
-            answers[i] = Integer.toString(progression[missingElement]);
+            String [] progression = progressionGen(elements, firstElement, progressionStep);
+            answers[i] = progression[missingElement];
+            progression[missingElement] = "..";
+            questions[i] = String.join(" ", progression);
         }
         Engine.engine(taskDescription, questions, answers);
     }
-    public static int[] generateProgression(int elements, int first, int step) {
-        int[] output = new int[elements];
-        for (var n = 0; n < elements; n++) {
-            output[n] = first + n * step;
+    public static String[] progressionGen (int elements, int first, int step) {
+        String [] progression = new String[elements];
+        for (var m = 0; m < elements; m++) {
+            progression[m] = Integer.toString(first + m * step);
         }
-        return output;
-    }
-    public static String generateQuestion(int[] progression, int missingElement) {
-        var result = new StringBuilder();
-        for (var m = 0; m < progression.length; m++) {
-            if (m != missingElement) {
-                result.append(progression[m]);
-                result.append(" ");
-            } else {
-                result.append(".. ");
-            }
-        }
-        return result.toString();
+        return progression;
     }
 }
