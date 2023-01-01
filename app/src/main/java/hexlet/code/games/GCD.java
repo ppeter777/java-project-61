@@ -25,10 +25,13 @@ public class GCD {
     public static int gcdCalc(int maxGCD, int random1, int random2) {
         int gcd = 1;
         for (var n = 1; n <= maxGCD; n++) {
-            if (random1 % n == 0 && random2 % n == 0) {
+            if (isDivisible(random1, n) && isDivisible(random2, n)) {
                 gcd = n;
             }
         }
         return gcd;
+    }
+    public static boolean isDivisible (int input, int divisor) {
+        return input % divisor == 0;
     }
 }
