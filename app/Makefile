@@ -1,5 +1,5 @@
 run-dist: # run application
 	./build/install/app/bin/app
-install:
+install: # install application
         ./gradlew clean install
 
