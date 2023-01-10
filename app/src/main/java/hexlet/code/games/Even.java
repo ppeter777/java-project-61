@@ -7,6 +7,7 @@ public class Even {
     public static void even() {
         final var minRandom = 1;
         final var maxRandom = 100;
+
         String[][] test = new String[2][Engine.getRounds()];
         String taskDescription = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         for (var i = 0; i < Engine.getRounds(); i++) {
