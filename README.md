@@ -27,7 +27,11 @@ make run-dist
 ### Примеры работы
 
 Even: https://asciinema.org/a/wraKScjuK9vyCYKmgEMf9FWtC
+
 Calc: https://asciinema.org/a/YqfKvFC4Gt4G5TfLATWenLAsf
+
 GCD: https://asciinema.org/a/aGlw2k3m8z9gPe7DCm5vYbXmO
+
 Progression: https://asciinema.org/a/rxotFTFk4EXuWkXL1p8EJQHei
+
 Prime: https://asciinema.org/a/F52ll4u5VLtOdQvJeMosKUoIq
