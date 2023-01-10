@@ -8,8 +8,7 @@ public class GCD {
         final var minRandom = 2;
         final var maxRandom = 100;
 
-        String[] questions = new String[Engine.getRounds()];
-        String[] answers = new String[Engine.getRounds()];
+        String[][] test = new String[2][Engine.getRounds()];
         String taskDescription = "Find the greatest common divisor of given numbers.";
 
         for (var i = 0; i < Engine.getRounds(); i++) {
@@ -17,10 +16,10 @@ public class GCD {
             int random2 = Utils.randomGen(minRandom, maxRandom);
             int maxGCD = Math.min(random1, random2);
             int gcd = gcdCalc(maxGCD, random1, random2);
-            questions[i] = random1 + " " + random2;
-            answers[i] = Integer.toString(gcd);
+            test[0][i] = random1 + " " + random2;
+            test[1][i] = Integer.toString(gcd);
         }
-        Engine.engine(taskDescription, questions, answers);
+        Engine.engine(taskDescription, test);
     }
     public static int gcdCalc(int maxGCD, int random1, int random2) {
         int gcd = 1;

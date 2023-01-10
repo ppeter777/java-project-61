@@ -8,16 +8,14 @@ public class Prime {
         final var minNumber = 2;
         final var maxNumber = 100;
 
-        String[] questions = new String[Engine.getRounds()];
-        String[] answers = new String[Engine.getRounds()];
+        String[][] test = new String[2][Engine.getRounds()];
         String taskDescription = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-
         for (var i = 0; i < Engine.getRounds(); i++) {
             var randomNum = Utils.randomGen(minNumber, maxNumber);
-            questions[i] = Integer.toString(randomNum);
-            answers[i] = primeCheck(randomNum);
+            test[0][i] = Integer.toString(randomNum);
+            test[1][i] = primeCheck(randomNum);
         }
-        Engine.engine(taskDescription, questions, answers);
+        Engine.engine(taskDescription, test);
     }
     public static String primeCheck(int input) {
         String output = "yes";

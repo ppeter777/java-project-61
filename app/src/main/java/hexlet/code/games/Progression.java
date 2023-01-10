@@ -12,8 +12,7 @@ public class Progression {
         final var minStep = 5;
         final var maxStep = 12;
 
-        String[] questions = new String[Engine.getRounds()];
-        String[] answers = new String[Engine.getRounds()];
+        String[][] test = new String[2][Engine.getRounds()];
         String taskDescription = "What number is missing in the progression?";
 
         for (var i = 0; i < Engine.getRounds(); i++) {
@@ -22,11 +21,11 @@ public class Progression {
             int elements = Utils.randomGen(minElements, maxElements);
             int missingElement = Utils.randomGen(0, elements - 1);
             String[] progression = progressionGen(elements, firstElement, progressionStep);
-            answers[i] = progression[missingElement];
+            test[1][i] = progression[missingElement];
             progression[missingElement] = "..";
-            questions[i] = String.join(" ", progression);
+            test[0][i] = String.join(" ", progression);
         }
-        Engine.engine(taskDescription, questions, answers);
+        Engine.engine(taskDescription, test);
     }
     public static String[] progressionGen(int elements, int first, int step) {
         String[] progression = new String[elements];

@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class Engine {
     private static final int ROUNDS = 3;
-    public static void engine(String taskDescription, String[] questions, String[] answers) {
+    public static void engine(String taskDescription, String[][] test) {
         Scanner scanner = new Scanner(System.in);
         String user = Cli.greeting();
         System.out.println(taskDescription);
         for (var i = 0; i < ROUNDS; i++) {
-            System.out.println("Question: " + questions[i]);
+            System.out.println("Question: " + test[0][i]);
             System.out.print("Your answer:  ");
             String input = scanner.next();
-            if (input.equals(answers[i])) {
+            if (input.equals(test[1][i])) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + input + "' is wrong answer ;(. Correct answer was '" + answers[i] + "'");
+                System.out.println("'" + input + "' is wrong answer ;(. Correct answer was '" + test[1][i] + "'");
                 System.out.println("Let's try again, " + user + "!");
                 scanner.close();
                 return;
