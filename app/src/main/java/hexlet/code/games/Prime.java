@@ -13,18 +13,21 @@ public class Prime {
         for (var i = 0; i < Engine.getRounds(); i++) {
             var randomNum = Utils.randomGen(minNumber, maxNumber);
             test[0][i] = Integer.toString(randomNum);
-            test[1][i] = primeCheck(randomNum);
+            if (primeCheck(randomNum)) {
+                test[1][i] = "yes";
+            } else {
+                test[1][i] = "no";
+            }
         }
         Engine.engine(taskDescription, test);
     }
-    public static String primeCheck(int input) {
-        String output = "yes";
+    public static boolean primeCheck(int input) {
         for (var i = 2; i <= input / 2; i++) {
             if (isDivisible(input, i)) {
-                output = "no";
+                return false;
             }
         }
-        return output;
+        return true;
     }
     public static boolean isDivisible(int input, int divisor) {
         return input % divisor == 0;
