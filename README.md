@@ -14,6 +14,15 @@
 - Определение наибольшего общего делителя.
 - Определение простого числа.
 
+### Установка
+
+git@github.com:ppeter777/java-project-61.git
+
+
+### Запуск
+
+
+
 
 
 Even: https://asciinema.org/a/wraKScjuK9vyCYKmgEMf9FWtC
