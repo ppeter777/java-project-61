@@ -16,10 +16,13 @@
 
 ### Установка
 
-git@github.com:ppeter777/java-project-61.git
-
+git clone git@github.com:ppeter777/java-project-61.git
+cd java-project-61/app
+make install
 
 ### Запуск
+
+make run-dist
 
 
 
