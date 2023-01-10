@@ -14,16 +14,15 @@ public class GCD {
         for (var i = 0; i < Engine.getRounds(); i++) {
             int random1 = Utils.randomGen(minRandom, maxRandom);
             int random2 = Utils.randomGen(minRandom, maxRandom);
-            int maxGCD = Math.min(random1, random2);
-            int gcd = gcdCalc(maxGCD, random1, random2);
+            int gcd = gcdCalc(random1, random2);
             test[0][i] = random1 + " " + random2;
             test[1][i] = Integer.toString(gcd);
         }
         Engine.engine(taskDescription, test);
     }
-    public static int gcdCalc(int maxGCD, int random1, int random2) {
+    public static int gcdCalc(int random1, int random2) {
         int gcd = 1;
-        for (var n = 1; n <= maxGCD; n++) {
+        for (var n = 1; n <= Math.min(random1, random2); n++) {
             if (isDivisible(random1, n) && isDivisible(random2, n)) {
                 gcd = n;
             }
