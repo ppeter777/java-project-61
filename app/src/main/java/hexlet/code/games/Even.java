@@ -8,15 +8,15 @@ public class Even {
         final var minRandom = 1;
         final var maxRandom = 100;
 
-        String[][] questionsAndAnswers = new String[2][Engine.getRounds()];
+        String[][] questionsAndAnswers = new String[Engine.getRounds()][2];
         String taskDescription = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         for (var i = 0; i < Engine.getRounds(); i++) {
             int randomNum = Utils.randomGen(minRandom, maxRandom);
-            questionsAndAnswers[0][i] = Integer.toString(randomNum);
+            questionsAndAnswers[i][0] = Integer.toString(randomNum);
             if (isEven(randomNum)) {
-                questionsAndAnswers[1][i] = "yes";
+                questionsAndAnswers[i][1] = "yes";
             } else {
-                questionsAndAnswers[1][i] = "no";
+                questionsAndAnswers[i][1] = "no";
             }
         }
         Engine.engine(taskDescription, questionsAndAnswers);
