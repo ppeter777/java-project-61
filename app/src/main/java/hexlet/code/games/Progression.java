@@ -14,7 +14,6 @@ public class Progression {
 
         String[][] questionsAndAnswers = new String[Engine.getRounds()][2];
         String taskDescription = "What number is missing in the progression?";
-
         for (var i = 0; i < Engine.getRounds(); i++) {
             int progressionStep = Utils.randomGen(minStep, maxStep);
             int firstElement = Utils.randomGen(minFirstElement, maxFirstElement);

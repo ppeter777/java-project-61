@@ -12,7 +12,6 @@ public class Calc {
         String taskDescription = "What is the result of the expression?";
         String[] operations = {" + ", " - ", " * "};
         int operationsCount = operations.length;
-
         for (var i = 0; i < Engine.getRounds(); i++) {
             int operationCode = Utils.randomGen(0, operationsCount - 1);
             int result = 0;
