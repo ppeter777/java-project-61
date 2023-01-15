@@ -18,7 +18,7 @@ public class Engine {
             if (input.equals(questionsAndAnswers[i][1])) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + input + "' is wrong answer ;(. Correct answer was '" + questionsAndAnswers[i][1] + "'");
+                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'%n", input, questionsAndAnswers[i][1]);
                 System.out.println("Let's try again, " + userName + "!");
                 scanner.close();
                 return;
