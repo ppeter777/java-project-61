@@ -8,7 +8,7 @@ public class Calc {
         final var minRandom = 1;
         final var maxRandom = 50;
 
-        String[][] test = new String[2][Engine.getRounds()];
+        String[][] questionsAndAnswers = new String[2][Engine.getRounds()];
         String taskDescription = "What is the result of the expression?";
         String[] operations = {" + ", " - ", " * "};
         int operationsCount = operations.length;
@@ -25,9 +25,9 @@ public class Calc {
             } else if (operationCode == 2) {
                 result = operand1 * operand2;
             }
-            test[0][i] = operand1 + operations[operationCode] + operand2;
-            test[1][i] = Integer.toString(result);
+            questionsAndAnswers[0][i] = operand1 + operations[operationCode] + operand2;
+            questionsAndAnswers[1][i] = Integer.toString(result);
         }
-        Engine.engine(taskDescription, test);
+        Engine.engine(taskDescription, questionsAndAnswers);
     }
 }
