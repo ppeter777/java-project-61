@@ -14,19 +14,24 @@ public class Calc {
         int operationsCount = operations.length;
         for (var i = 0; i < Engine.getRounds(); i++) {
             int operationCode = Utils.randomGen(0, operationsCount - 1);
-            int result = 0;
             int operand1 = Utils.randomGen(minRandom, maxRandom);
             int operand2 = Utils.randomGen(minRandom, maxRandom);
-            if (operationCode == 0) {
-                result = operand1 + operand2;
-            } else if (operationCode == 1) {
-                result = operand1 - operand2;
-            } else if (operationCode == 2) {
-                result = operand1 * operand2;
-            }
+            int result = calcResult(operationCode, operand1, operand2);
             questionsAndAnswers[i][0] = operand1 + operations[operationCode] + operand2;
             questionsAndAnswers[i][1] = Integer.toString(result);
         }
         Engine.engine(taskDescription, questionsAndAnswers);
+    }
+
+    public static int calcResult(int operationCode, int operand1, int operand2) {
+        int result = 0;
+        if (operationCode == 0) {
+            result = operand1 + operand2;
+        } else if (operationCode == 1) {
+            result = operand1 - operand2;
+        } else if (operationCode == 2) {
+            result = operand1 * operand2;
+        }
+        return result;
     }
 }
