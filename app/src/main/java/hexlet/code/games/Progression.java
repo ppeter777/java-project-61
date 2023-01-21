@@ -17,9 +17,9 @@ public class Progression {
         for (var i = 0; i < Engine.getRounds(); i++) {
             int progressionStep = Utils.randomGen(minStep, maxStep);
             int firstElement = Utils.randomGen(minFirstElement, maxFirstElement);
-            int elements = Utils.randomGen(minElements, maxElements);
-            int missingElement = Utils.randomGen(0, elements - 1);
-            String[] progression = progressionGen(elements, firstElement, progressionStep);
+            int elementsInProgression = Utils.randomGen(minElements, maxElements);
+            int missingElement = Utils.randomGen(0, elementsInProgression - 1);
+            String[] progression = progressionGen(elementsInProgression, firstElement, progressionStep);
             questionsAndAnswers[i][1] = progression[missingElement];
             progression[missingElement] = "..";
             questionsAndAnswers[i][0] = String.join(" ", progression);
