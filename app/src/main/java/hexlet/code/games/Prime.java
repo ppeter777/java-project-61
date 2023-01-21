@@ -13,11 +13,7 @@ public class Prime {
         for (var i = 0; i < Engine.getRounds(); i++) {
             var randomNum = Utils.randomGen(minNumber, maxNumber);
             questionsAndAnswers[i][0] = Integer.toString(randomNum);
-            if (primeCheck(randomNum)) {
-                questionsAndAnswers[i][1] = "yes";
-            } else {
-                questionsAndAnswers[i][1] = "no";
-            }
+            questionsAndAnswers[i][1] = primeCheck(randomNum) ? "yes" : "no";
         }
         Engine.engine(taskDescription, questionsAndAnswers);
     }
