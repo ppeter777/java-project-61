@@ -13,11 +13,7 @@ public class Even {
         for (var i = 0; i < Engine.getRounds(); i++) {
             int randomNum = Utils.randomGen(minRandom, maxRandom);
             questionsAndAnswers[i][0] = Integer.toString(randomNum);
-            if (isEven(randomNum)) {
-                questionsAndAnswers[i][1] = "yes";
-            } else {
-                questionsAndAnswers[i][1] = "no";
-            }
+            questionsAndAnswers[i][1] = isEven(randomNum) ? "yes" : "no";
         }
         Engine.engine(taskDescription, questionsAndAnswers);
     }
